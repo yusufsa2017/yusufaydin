@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* Basic CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Add more styles as needed */
+  </style>
+  <script>
+    // JavaScript code to handle menu button clicks
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuItems = document.querySelectorAll('nav ul li a');
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          var target = document.querySelector(this.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#industry-knowledge">Industry Knowledge</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact-info">Contact Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects">
+      <!-- Content for the Projects section goes here -->
+      <h2>Projects</h2>
+    </section>
+
+    <section id="industry-knowledge">
+      <!-- Content for the Industry Knowledge section goes here -->
+      <h2>Industry Knowledge</h2>
+    </section>
+
+    <section id="resume">
+      <!-- Content for the Resume section goes here -->
+      <h2>Resume</h2>
+    </section>
+
+    <section id="contact-info">
+      <!-- Content for the Contact Info section goes here -->
+      <h2>Contact Info</h2>
+    </section>
+  </main>
+</body>
+</html>
